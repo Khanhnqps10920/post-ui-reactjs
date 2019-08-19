@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import "./App.css";
+import Header from './Components/Common/Header/Header';
+import Footer from './Components/Common/Footer/Footer';
+import CarouselComp from './Components/CarouselComp/CarouselComp';
+import PostSection from './Components/PostSection/PostSection';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends PureComponent {
+  render() {
+    return (
+      <div>
+        <Header />
+        <CarouselComp />
+        <PostSection />
+        <Footer />
+      </div>
+    );
+  }
 }
+
+App.propTypes = {
+
+};
 
 export default App;
